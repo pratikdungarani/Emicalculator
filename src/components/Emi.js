@@ -19,7 +19,7 @@ function Emi() {
         form.append('tenure', data?.tenure);
         form.append('rate', data?.rate);
 
-        let getdata = axios.post(API, form).then(function (res) {
+        axios.post(API, form).then(function (res) {
             console.log(JSON.stringify(res.data));
             setemidata(res?.data)
             setloader(false)
